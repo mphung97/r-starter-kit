@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 
 import Login from 'containers/Login/Loadable';
 import Layout from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import FeaturePage from 'containers/UrbanPage/Loadable';
 // import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export const PATHS = {

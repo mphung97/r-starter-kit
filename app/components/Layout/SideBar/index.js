@@ -53,12 +53,7 @@ export default function Sidebar({ routes }) {
 
   return (
     <div className="d-sidebar">
-      <div
-        className="logo"
-        style={{
-          backgroundColor: '#f5f5f5',
-        }}
-      />
+      <div className="logo" />
       {displayRouteMenu(routes, history)}
     </div>
   );

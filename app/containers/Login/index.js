@@ -4,21 +4,6 @@ import { Form, Input, Button, Row, Col } from 'antd';
 
 import { PATHS } from '../../routes';
 
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-
 export default function Login() {
   const history = useHistory();
 
@@ -39,10 +24,10 @@ export default function Login() {
   }
 
   return (
-    <Row style={{ marginTop: '10rem' }}>
-      <Col span={12} offset={6}>
+    <Row style={{ paddingTop: '10rem' }}>
+      <Col span={6} offset={9}>
         <Form
-          {...layout}
+          layout="vertical"
           name="login"
           initialValues={{
             remember: false,
@@ -80,7 +65,7 @@ export default function Login() {
             <Checkbox>Remember me</Checkbox>
           </Form.Item> */}
 
-          <Form.Item {...tailLayout}>
+          <Form.Item>
             <Button type="primary" htmlType="submit">
               Submit
             </Button>

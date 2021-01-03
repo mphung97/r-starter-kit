@@ -2,16 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function NavBar({ children }) {
-  return (
-    <div
-      className="d-navbar"
-      style={{
-        backgroundColor: '#f5f5f5',
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <div className="d-navbar">{children}</div>;
 }
 
 NavBar.propTypes = {

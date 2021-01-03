@@ -15,7 +15,12 @@
  *    }
  */
 
-import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR } from './constants';
+import {
+  LOAD_REPOS,
+  LOAD_REPOS_SUCCESS,
+  LOAD_REPOS_ERROR,
+  RESET_APP_STATE,
+} from './constants';
 
 /**
  * Load the repositories, this action starts the request saga
@@ -55,5 +60,16 @@ export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
     error,
+  };
+}
+
+/**
+ * Dispatched when reset app state
+ *
+ * @return {object}       An action object with a type of RESET_APP_STATE
+ */
+export function resetAppState() {
+  return {
+    type: RESET_APP_STATE,
   };
 }

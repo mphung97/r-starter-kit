@@ -1,0 +1,29 @@
+$navbar-height: 4rem;
+$content-padding: 1.5rem;
+
+.d-layout {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+
+  .d-sidebar {
+    width: 256px;
+    border-right: 1px solid #f0f0f0;
+
+    .logo {
+      height: $navbar-height;
+    }
+  }
+
+  .d-navbar {
+    height: $navbar-height;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .d-content {
+    padding: $content-padding;
+  }
+}

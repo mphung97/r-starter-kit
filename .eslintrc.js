@@ -78,6 +78,8 @@ module.exports = {
     'redux-saga/no-yield-in-race': 2,
     'redux-saga/yield-effects': 2,
     'require-yield': 0,
+    'react/prop-types': 1,
+    'no-unused-vars': 1,
   },
   settings: {
     'import/resolver': {

@@ -2,6 +2,8 @@ import React from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 import { Form, Input, Button, Row, Col } from 'antd';
 
+import { PATHS } from '../../routes';
+
 const layout = {
   labelCol: {
     span: 8,
@@ -23,8 +25,8 @@ export default function Login() {
   // "log in" a user
   const onFinish = values => {
     console.log('Success:', values);
-    localStorage.setItem('user', values);
-    history.push('/app');
+    localStorage.setItem('authenticated', true);
+    history.push(PATHS.DASHBOARD);
   };
 
   const onFinishFailed = errorInfo => {
@@ -32,8 +34,8 @@ export default function Login() {
   };
 
   // if user already "authenticated", redirect them to the app
-  if (localStorage.getItem('user')) {
-    return <Redirect to="/" />;
+  if (localStorage.getItem('authenticated')) {
+    return <Redirect to={PATHS.DASHBOARD} />;
   }
 
   return (

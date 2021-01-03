@@ -8,15 +8,24 @@
  */
 
 import produce from 'immer';
-import { LOAD_REPOS_SUCCESS, LOAD_REPOS, LOAD_REPOS_ERROR } from './constants';
+import {
+  LOAD_REPOS_SUCCESS,
+  LOAD_REPOS,
+  LOAD_REPOS_ERROR,
+  RESET_APP_STATE,
+} from './constants';
 
 // The initial state of the App
 export const initialState = {
   loading: false,
   error: false,
   currentUser: false,
-  userData: {
-    repositories: false,
+  userInfo: {
+    authenticated: false,
+    user: {
+      role: 'user',
+    },
+    // accessToken: '',
   },
 };
 
@@ -39,6 +48,10 @@ const appReducer = (state = initialState, action) =>
       case LOAD_REPOS_ERROR:
         draft.error = action.error;
         draft.loading = false;
+        break;
+
+      case RESET_APP_STATE:
+        draft = initialState;
         break;
     }
   });
